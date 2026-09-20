@@ -527,7 +527,7 @@ function drawGorillaLeftArm(player) {
 }
 
 function drawGorillaRightArm(player) {
-  ctx.strokeStyle = "white";
+  ctx.strokeStyle = "black";
   ctx.lineWidth = 18;
 
   ctx.beginPath();
