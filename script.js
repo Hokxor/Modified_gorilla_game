@@ -527,7 +527,7 @@ function drawGorillaLeftArm(player) {
 }
 
 function drawGorillaRightArm(player) {
-  ctx.strokeStyle = "black";
+  ctx.strokeStyle = "white";
   ctx.lineWidth = 18;
 
   ctx.beginPath();
@@ -640,13 +640,13 @@ function drawBomb() {
     ctx.stroke();
 
     // Draw circle
-    ctx.fillStyle = "orange";
+    ctx.fillStyle = "blue";
     ctx.beginPath();
     ctx.arc(0, 0, 6, 0, 2 * Math.PI);
     ctx.fill();
   } else if (state.phase === "in flight") {
     // Draw rotated banana
-    ctx.fillStyle = "orange";
+    ctx.fillStyle = "light blue";
     ctx.rotate(state.bomb.rotation);
     ctx.beginPath();
     ctx.moveTo(-8, -2);
@@ -655,7 +655,7 @@ function drawBomb() {
     ctx.fill();
   } else {
     // Draw circle
-    ctx.fillStyle = "orange";
+    ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(0, 0, 6, 0, 2 * Math.PI);
     ctx.fill();
@@ -667,7 +667,7 @@ function drawBomb() {
   // Indicator showing if the bomb is above the screen
   if (state.bomb.y > window.innerHeight / state.scale) {
     ctx.beginPath();
-    ctx.strokeStyle = "orange";
+    ctx.strokeStyle = "white";
     const distance = state.bomb.y - window.innerHeight / state.scale;
     ctx.moveTo(state.bomb.x, window.innerHeight / state.scale - 10);
     ctx.lineTo(state.bomb.x, window.innerHeight / state.scale - distance);
@@ -681,7 +681,7 @@ function drawBomb() {
   // Indicator showing the starting position of the bomb
   if (state.bomb.highlight) {
     ctx.beginPath();
-    ctx.strokeStyle = "orange";
+    ctx.strokeStyle = "blue";
     ctx.lineWidth = 2;
     ctx.moveTo(state.bomb.x, state.bomb.y + 20);
     ctx.lineTo(state.bomb.x, state.bomb.y + 120);
