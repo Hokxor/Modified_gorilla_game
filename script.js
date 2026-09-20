@@ -895,7 +895,7 @@ function moveBomb(elapsedTime) {
 
   // Rotate according to the direction
   const direction = state.currentPlayer === 1 ? -1 : +1;
-  state.bomb.rotation += direction * 5 * multiplier;
+  state.bomb.rotation += direction * 3 * multiplier;
 }
 
 function checkFrameHit() {
