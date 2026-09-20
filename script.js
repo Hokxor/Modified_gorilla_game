@@ -976,7 +976,7 @@ function announceWinner() {
   } else if (settings.numberOfPlayers === 1 && state.currentPlayer === 1) {
     winnerDOM.innerText = `You`;
   } else if (settings.numberOfPlayers === 1 && state.currentPlayer === 2) {
-    winnerDOM.innerText = `Computer`;
+    winnerDOM.innerText = `Enemy`;
   } else {
     winnerDOM.innerText = `Player ${state.currentPlayer}`;
   }
@@ -988,7 +988,7 @@ singlePlayerButtonDOM.forEach((button) =>
     settings.numberOfPlayers = 1;
     gameModeDOM.innerHTML = "Player vs. Computer";
     name1DOM.innerText = "Player";
-    name2DOM.innerText = "Computer";
+    name2DOM.innerText = "Enemy";
 
     newGame();
   })
@@ -1021,7 +1021,7 @@ function generateWindSpeed() {
 }
 
 function setWindMillRotation() {
-  const rotationSpeed = Math.abs(50 / state.windSpeed);
+  const rotationSpeed = Math.abs(35 / state.windSpeed);
   windmillHeadDOM.style.animationDirection =
     state.windSpeed > 0 ? "normal" : "reverse";
   windmillHeadDOM.style.animationDuration = `${rotationSpeed}s`;
